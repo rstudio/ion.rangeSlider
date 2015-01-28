@@ -816,6 +816,7 @@
          */
         pointerDown: function (target, e) {
             e.preventDefault();
+            e.stopPropagation();
             var x = e.pageX || e.originalEvent.touches && e.originalEvent.touches[0].pageX;
             if (e.button === 2) {
                 return;
@@ -859,6 +860,7 @@
          */
         pointerClick: function (target, e) {
             e.preventDefault();
+            e.stopPropagation();
             var x = e.pageX || e.originalEvent.touches && e.originalEvent.touches[0].pageX;
             if (e.button === 2) {
                 return;
